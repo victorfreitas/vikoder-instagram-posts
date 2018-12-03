@@ -5,3 +5,5 @@
 
 [Follow me](https://instagram.com/vikoder/)
 -
+
+<img src="https://vikoder.com/images/logo.jpg">
