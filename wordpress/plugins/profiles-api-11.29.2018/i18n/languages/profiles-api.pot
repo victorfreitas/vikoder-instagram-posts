@@ -1,0 +1,42 @@
+# Copyright (C) 2018 Viktor Freitas
+# This file is distributed under the GPL-3.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Profiles API 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-04 01:18:49+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Viktor Freitas <viktorfreitas@bk.ru>\n"
+"Language-Team: Viktor Freitas <viktorfreitas@bk.ru>\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n1.0.2\n"
+
+#: includes/functions.php:18
+msgid "Profiles API plugin: "
+msgstr ""
+
+#: includes/functions.php:30
+#. translators: %s: phpversion()
+msgid "Your PHP version (%s) is not supported. Required is 5.3+"
+msgstr ""
+
+#: includes/functions.php:36
+msgid "Please install plugin dependencies. Use <code>composer install</code>"
+msgstr ""
+
+#: src/Controller/Profiles.php:33
+msgid "Profile not found"
+msgstr ""

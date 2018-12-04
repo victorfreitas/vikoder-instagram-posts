@@ -1,0 +1,19 @@
+{
+  "name": "profiles-api",
+  "version": "0.1.0",
+  "description": "WordPress plugin profiles api rest",
+  "main": "index.js",
+  "private": true,
+  "author": {
+    "name": "Viktor Freitas",
+    "email": "viktorfreitas@bk.ru"
+  },
+  "scripts": {
+    "makepot": "grunt --gruntfile i18n/makepot.js makepot"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-cli": "^1.2.0",
+    "grunt-wp-i18n": "^1.0.2"
+  }
+}

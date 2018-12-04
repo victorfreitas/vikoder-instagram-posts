@@ -1,0 +1,18 @@
+.btn {
+  background-color: #3b5998;
+  border-bottom: 5px solid #4869b1;
+  border-radius: 3px;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bolder;
+  outline: none;
+  padding: 20px;
+}
+
+.btn:active {
+  border: 0;
+  position: relative;
+  top: 5px;
+}

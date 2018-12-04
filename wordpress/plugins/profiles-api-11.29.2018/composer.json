@@ -1,0 +1,17 @@
+{
+	"name": "viktor-freitas/profiles-api",
+	"description": "WordPress plugin",
+	"version": "0.1.0",
+	"type": "wordpress-plugin",
+	"license": "GPL",
+	"prefer-stable" : true,
+	"require": {
+		"php": ">=5.3",
+		"composer/installers": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ProfilesApi\\": "src/"
+    }
+  }
+}

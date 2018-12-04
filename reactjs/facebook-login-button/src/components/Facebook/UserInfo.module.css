@@ -1,0 +1,24 @@
+.content {
+  background: #f17133;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ff8100;
+  color: #fbfbfb;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.picture {
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+
+.list {
+  list-style: none;
+  margin: 0 0 15px 0;
+  padding: 0;
+  text-align: center;
+}
+
+.listItem {
+  font-size: 14px;
+}
