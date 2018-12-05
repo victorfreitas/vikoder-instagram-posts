@@ -21,7 +21,3 @@ const data = {
 postData(API_URL, data)
   .then(response => console.log(response))
   .catch(error => console.log(error.message))
-
-
-
-
