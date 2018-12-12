@@ -30,7 +30,7 @@ const App = () => {
     <Body
       count={count}
       mouseMove={mouseMove}
-      onClick={() => setCount(prevState => prevState + 1)}
+      handleClick={() => setCount(prevState => prevState + 1)}
     />
   )
 }

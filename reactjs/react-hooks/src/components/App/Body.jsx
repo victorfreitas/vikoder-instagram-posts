@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Body = ({ count, mouseMove, onClick }) => (
+const Body = ({ count, mouseMove, handleClick }) => (
   <div className="App">
     <header className="App-header">
       <div className="counter">
@@ -8,7 +9,7 @@ const Body = ({ count, mouseMove, onClick }) => (
         <strong>
           {count}
         </strong>
-        <button onClick={onClick}>
+        <button onClick={handleClick}>
           Increment
         </button>
       </div>
@@ -35,5 +36,14 @@ const Body = ({ count, mouseMove, onClick }) => (
     </header>
   </div>
 )
+
+Body.propTypes = {
+  count: PropTypes.number.isRequired,
+  handleClick: PropTypes.func.isRequired,
+  mouseMove: PropTypes.shape({
+    x: PropTypes.number.isRequired,
+    y: PropTypes.number.isRequired,
+  }).isRequired,
+}
 
 export default Body
