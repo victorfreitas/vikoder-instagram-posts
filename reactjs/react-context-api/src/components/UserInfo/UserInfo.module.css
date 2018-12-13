@@ -1,0 +1,43 @@
+.content {
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+}
+
+.avatar {
+  margin: 0 0 15px 0;
+  max-width: 300px;
+  padding: 0;
+}
+
+.avatar img {
+  border-radius: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.name,
+.bio,
+.location,
+.url {
+  color: #4f6169;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin: 2px 0;
+  text-align: left;
+}
+
+.url {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.url a {
+  color: #1e98d0;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
