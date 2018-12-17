@@ -1,0 +1,37 @@
+.error-boundary {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
+  font-size: 14px;
+  padding: 6px;
+
+  h2 {
+    text-shadow: none;
+  }
+
+  details {
+    border-radius: 4px;
+    border: 1px solid #b65062;
+    margin: 0 auto;
+    padding: .5em .5em 0;
+    white-space: pre-wrap;
+    width: 95%;
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      margin: -.5em -.5em 0;
+      outline: none;
+      padding: .5em;
+    }
+
+    &[open] {
+      padding: .5em;
+
+      summary {
+        border-bottom: 1px solid #b65062;
+        margin-bottom: .5em;
+      }
+    }
+  }
+}

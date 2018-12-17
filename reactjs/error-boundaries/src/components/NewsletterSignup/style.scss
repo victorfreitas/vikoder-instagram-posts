@@ -1,0 +1,22 @@
+.newsletter-signup {
+  background-color: #607D8B;
+  grid-area: newsletter-signup;
+
+  .field-email {
+    border: 0;
+    outline: none;
+    padding: 10px;
+    width: 300px;
+  }
+
+  .button {
+    background-color: #30d7ff;
+    border-radius: 0;
+    color: #fff;
+    padding: 7px 10px 9px 10px;
+  }
+
+  p {
+    margin: 5px;
+  }
+}
