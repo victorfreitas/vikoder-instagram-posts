@@ -1,0 +1,29 @@
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  margin: 0 auto;
+}
+
+.spinner:before {
+  animation: spinner .5s linear infinite;
+  background-color: transparent;
+  border-bottom-color: #337ab6;
+  border-left-color: #fff;
+  border-radius: 50%;
+  border-right-color: #fff;
+  border-style: solid;
+  border-top-color: #337ab6;
+  border-width: 3px;
+  content: '';
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  width: 60px;
+}
