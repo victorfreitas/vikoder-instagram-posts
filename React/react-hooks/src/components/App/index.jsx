@@ -1,39 +1,40 @@
+/**
+ * (React Hooks v16.7.0-alpha.2) useState and useEffect
+ * @author vikoder
+ */
 import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 import './style.css'
-import Body from './Body'
+import Posts from '../Posts'
 
 const App = () => {
-  const [count, setCount] = useState(0)
-  const [mouseMove, setMouseMove] = useState({ x: 0, y: 0 })
+  const [posts, setPosts] = useState([])
 
-  useEffect(() => { // Similar to componentDidMount:
-    window.addEventListener('mousemove', handleMouseMove)
-  }, []) // use empty array for don't update on state change
+  const fetchPosts = async () => {
+    const { REACT_APP_API_POSTS } = process.env
+    const { data } = await axios(REACT_APP_API_POSTS)
 
-  useEffect(() => { // Similar to componentDidMount and componentDidUpdate:
-    document.title = `Counter: ${count}`
-  }, [count])
-
-  useEffect(() => {
-    // ... subscribe
-    return () => { // Similar to componentWillUnmount
-      // ... unsubscribe
-    }
-  })
-
-  const handleMouseMove = ({ clientX: x, clientY: y }) => {
-    setMouseMove({ x, y })
+    setPosts(data)
   }
 
+  /*
+   * useEffect function must return a cleanup function or nothing.
+   * Promises and useEffect(async () => ...) are not supported,
+   * but you can call an async function inside an effect.
+   * Use an empty array in second parameter, don't dispatch on update
+   */
+  useEffect(() => {
+    fetchPosts()
+  }, [])
+
   return (
-    <Body
-      count={count}
-      mouseMove={mouseMove}
-      handleClick={() => setCount(prevState => prevState + 1)}
-    />
+    <div className="App">
+      <div className="App-header">
+        <Posts posts={posts} />
+      </div>
+    </div>
   )
 }
 
 export default App
-// (React v16.7.0-alpha.2) useState and useEffect Hook

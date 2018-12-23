@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Card = ({ item }) => (
-  <div className="card" style={{ width: '18rem' }}>
+  <div className="card" style={{ maxWidth: '200px' }}>
     <img className="card-img-top" src={item.url} alt={item.title} />
     <div className="card-body">
       <h5 className="card-title">
