@@ -1,0 +1,50 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.todos li {
+  align-items: center;
+  background: #00BCD4;
+  border-radius: 2px;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 0;
+  padding: 5px;
+  width: 250px;
+}
+
+.todos .title {
+  display: flex;
+  flex: 1;
+  font-size: 18px;
+  justify-content: flex-start;
+}
+
+.todos .complete .title {
+  color: #087684;
+  text-decoration: line-through;
+}
+
+.todos .complete .todo-button {
+  background: #087684;
+}
+
+.todo-button {
+  background: #ffffff;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 10px;
+  outline: none;
+  padding: 0;
+}
+
+.todo-button img {
+  border-radius: 5px;
+  border: 1px solid transparent;
+  width: 18px;
+}

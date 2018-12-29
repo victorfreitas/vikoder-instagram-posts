@@ -1,39 +1,28 @@
 /**
- * (React Hooks v16.7.0-alpha.2) useState and useEffect
+ * (React Hooks v16.7.0-alpha.2) useContext and useReducer
  * @author vikoder
  */
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useContext, useReducer } from 'react'
 
 import './style.css'
-import Posts from '../Posts'
+
+import TodosContext, { Provider } from '../context/TodosContext'
+import todosReducer from '../../reducers/todosReducer'
+import TodoList from '../TodoList'
 
 const App = () => {
-  const [posts, setPosts] = useState([])
-
-  const fetchPosts = async () => {
-    const { REACT_APP_API_POSTS } = process.env
-    const { data } = await axios(REACT_APP_API_POSTS)
-
-    setPosts(data)
-  }
-
-  /*
-   * useEffect function must return a cleanup function or nothing.
-   * Promises and useEffect(async () => ...) are not supported,
-   * but you can call an async function inside an effect.
-   * Use an empty array in second parameter, don't dispatch on update
-   */
-  useEffect(() => {
-    fetchPosts()
-  }, [])
+  const initialState = useContext(TodosContext)
+  const [state, dispatch] = useReducer(todosReducer, initialState)
 
   return (
-    <div className="App">
-      <div className="App-header">
-        <Posts posts={posts} />
+    <Provider value={{ state, dispatch }}>
+      <div className="App">
+        <div className="App-header">
+          <h1>Todo List</h1>
+          <TodoList />
+        </div>
       </div>
-    </div>
+    </Provider>
   )
 }
 
