@@ -1,12 +1,23 @@
-import { createContext } from 'react'
+import React, { createContext, useReducer, useEffect } from 'react'
 
-const TodosContext = createContext({
-  todos: [
-    { id: 1, key: '1', title: 'JavaScript', complete: false },
-    { id: 2, key: '2', title: 'Node.js', complete: false },
-    { id: 3, key: '3', title: 'React', complete: false },
-  ]
-})
+import todosReducer from '../../reducers/todosReducer'
+import { fetchTodos } from '../../actions'
 
-export const { Provider } = TodosContext
+const initialState = { todos: [], isWait: true }
+const TodosContext = createContext(initialState)
+
+export const Provider = ({ children }) => {
+  const [state, dispatch] = useReducer(todosReducer, initialState)
+
+  useEffect(() => {
+    fetchTodos(dispatch)
+  }, [])
+
+  return (
+    <TodosContext.Provider value={{state, dispatch}}>
+      {children}
+    </TodosContext.Provider>
+  )
+}
+
 export default TodosContext

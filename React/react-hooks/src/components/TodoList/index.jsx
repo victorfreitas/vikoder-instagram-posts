@@ -10,7 +10,9 @@ const TodoList = () => {
 
   return (
     <ul className="todos">
-      {todos.reverse().map(todo => <TodoItem {...todo} />)}
+      {todos.reverse().map(todo => (
+        <TodoItem key={todo.id.toString()} todo={todo} />
+      ))}
     </ul>
   )
 }

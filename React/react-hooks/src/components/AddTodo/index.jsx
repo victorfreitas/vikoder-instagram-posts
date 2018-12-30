@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react'
 import './style.css'
 
 import TodosContext from '../context/TodosContext'
+import { addNewTodo } from '../../actions'
 import AddTodoField from './AddTodoField'
 import AddTodoButton from './AddTodoButton'
 
@@ -18,7 +19,7 @@ const AddTodo = () => {
       />
       <AddTodoButton
         handleClick={() => {
-          dispatch({ type: 'ADD_TODO', payload: value })
+          addNewTodo(value, dispatch)
           setValue('')
         }}
       />

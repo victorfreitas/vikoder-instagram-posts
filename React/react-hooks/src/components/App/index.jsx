@@ -2,30 +2,26 @@
  * (React Hooks v16.7.0-alpha.2) useContext and useReducer
  * @author vikoder
  */
-import React, { useContext, useReducer } from 'react'
+import React from 'react'
 
 import './style.css'
 
-import TodosContext, { Provider } from '../context/TodosContext'
-import todosReducer from '../../reducers/todosReducer'
+import { Provider } from '../context/TodosContext'
 import TodoList from '../TodoList'
 import AddTodo from '../AddTodo'
+import Spinner from '../Spinner'
 
-const App = () => {
-  const initialState = useContext(TodosContext)
-  const [state, dispatch] = useReducer(todosReducer, initialState)
-
-  return (
-    <Provider value={{ state, dispatch }}>
-      <div className="App">
-        <div className="App-header">
-          <h1>Todo List</h1>
-          <AddTodo />
-          <TodoList />
-        </div>
+const App = () => (
+  <Provider>
+    <div className="App">
+      <div className="App-header">
+        <h1>Todo List</h1>
+        <Spinner />
+        <AddTodo />
+        <TodoList />
       </div>
-    </Provider>
-  )
-}
+    </div>
+  </Provider>
+)
 
 export default App
