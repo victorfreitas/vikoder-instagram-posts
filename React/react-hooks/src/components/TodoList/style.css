@@ -17,10 +17,24 @@
 }
 
 .todos .title {
+  background: transparent;
+  border: 0;
+  color: #ffffff;
   display: flex;
-  flex: 1;
-  font-size: 18px;
+  flex: 1 1;
+  font-weight: 600;
   justify-content: flex-start;
+  outline: none;
+  padding: 4px 0 4px 0;
+  text-indent: 3px;
+}
+
+.todos .title:focus {
+  background: #1aabbd;
+}
+
+.todos .title:disabled {
+  user-select: none;
 }
 
 .todos .complete .title {
@@ -28,8 +42,12 @@
   text-decoration: line-through;
 }
 
-.todos .complete .todo-button {
-  background: #087684;
+.todos li:not(.complete) .todo-button.check {
+  background: #15a1bb;
+}
+
+.todo-button.trash {
+  background: transparent;
 }
 
 .todo-button {

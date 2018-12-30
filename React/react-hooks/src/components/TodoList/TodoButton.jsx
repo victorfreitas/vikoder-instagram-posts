@@ -1,23 +1,18 @@
-import React, { useContext } from 'react'
+import React from 'react'
 
-import TodosContext from '../context/TodosContext'
-import TodoIcon from './TodoIcon'
+import Icon from '../Icon'
 
-const TodoButton = ({ todo }) => {
-  const { dispatch } = useContext(TodosContext)
-
-  const toggleTodo = () => {
-    dispatch({
-      type: 'TOGGLE_COMPLETE',
-      payload: todo.id,
-    })
-  }
-
-  return (
-    <button className="todo-button" onClick={toggleTodo}>
-      <TodoIcon alt={todo.title} icon="check" />
-    </button>
-  )
-}
+const TodoButton = ({ icon, color, handleClick }) => (
+  <button
+    className={`todo-button ${icon}`}
+    onClick={handleClick}
+  >
+    <Icon
+      icon={icon}
+      color={color}
+      alt={`Todo ${icon}`}
+    />
+  </button>
+)
 
 export default TodoButton

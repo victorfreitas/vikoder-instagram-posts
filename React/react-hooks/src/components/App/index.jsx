@@ -9,6 +9,7 @@ import './style.css'
 import TodosContext, { Provider } from '../context/TodosContext'
 import todosReducer from '../../reducers/todosReducer'
 import TodoList from '../TodoList'
+import AddTodo from '../AddTodo'
 
 const App = () => {
   const initialState = useContext(TodosContext)
@@ -19,6 +20,7 @@ const App = () => {
       <div className="App">
         <div className="App-header">
           <h1>Todo List</h1>
+          <AddTodo />
           <TodoList />
         </div>
       </div>

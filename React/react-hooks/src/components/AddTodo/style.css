@@ -1,0 +1,43 @@
+.add-todo {
+  align-items: center;
+  background: #2a9baa;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  width: 250px;
+}
+
+.add-todo-field {
+  background: #205961;
+  border-radius: 3px;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  outline: 0;
+  padding: 4px 0 5px 0;
+  text-indent: 5px;
+}
+
+.add-todo-field::placeholder {
+  color: #298996;
+}
+
+.add-todo-button {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  padding: 6px;
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+}
+
+.add-todo .icon {
+  height: 12px;
+  width: 12px;
+}
