@@ -3,7 +3,7 @@ import axios from 'axios'
 const { REACT_APP_API_TODOS } = process.env
 
 const waitMe = async () => new Promise((resolve) => {
-  setTimeout(resolve, 100)
+  setTimeout(resolve, 80)
 })
 
 export const fetchTodos = async (dispatch) => {

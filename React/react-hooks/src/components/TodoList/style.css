@@ -66,3 +66,14 @@
   border: 1px solid transparent;
   width: 18px;
 }
+
+.empty-todos {
+  background: #2b4a4e;
+  border-radius: 3px;
+  color: #4cd1e4;
+  font-size: 12px;
+  margin-top: 5px;
+  padding: 5px;
+  text-transform: uppercase;
+  width: 250px;
+}
