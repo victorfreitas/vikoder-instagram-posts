@@ -2,7 +2,7 @@ import React from 'react'
 
 const EmptyTodos = () => (
   <p className="empty-todos">
-    Add you first todo
+    No todo found
   </p>
 )
 
