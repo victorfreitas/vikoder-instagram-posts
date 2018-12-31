@@ -1,7 +1,3 @@
-/**
- * TodoList.jsx
- * @author vikoder
- */
 import React, { useContext } from 'react'
 
 import './style.css'
@@ -11,9 +7,7 @@ import EmptyTodos from './EmptyTodos'
 import Todos from './Todos'
 
 const TodoList = () => {
-  const {
-    state: { todos, isWait }
-  } = useContext(TodosContext)
+  const { state: { isWait, todos } } = useContext(TodosContext)
 
   return (
     isWait

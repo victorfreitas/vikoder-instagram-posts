@@ -1,7 +1,3 @@
-/**
- * AddTodo.jsx
- * @author vikoder
- */
 import React, { useState, useContext } from 'react'
 
 import './style.css'

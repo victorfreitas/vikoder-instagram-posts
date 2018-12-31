@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const EmptyTodos = () => (
   <p className="empty-todos">
@@ -6,4 +6,4 @@ const EmptyTodos = () => (
   </p>
 )
 
-export default EmptyTodos
+export default memo(EmptyTodos)

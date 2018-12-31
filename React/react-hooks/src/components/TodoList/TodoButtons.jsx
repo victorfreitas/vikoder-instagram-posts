@@ -2,6 +2,7 @@ import React, { useContext, Fragment } from 'react'
 
 import TodosContext from '../context/TodosContext'
 import { toggleTodo, removeTodo } from '../../actions'
+import todoPropTypes from './todoPropTypes'
 import TodoButton from './TodoButton'
 
 const TodoButtons = ({ todo }) => {
@@ -23,5 +24,7 @@ const TodoButtons = ({ todo }) => {
     </Fragment>
   )
 }
+
+TodoButtons.propTypes = todoPropTypes
 
 export default TodoButtons

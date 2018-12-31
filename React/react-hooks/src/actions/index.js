@@ -6,33 +6,48 @@ import axios from 'axios'
 
 const { REACT_APP_API_TODOS } = process.env
 
-const waitMe = async (time) => new Promise((resolve) => {
-  setTimeout(resolve, time)
-})
+const waitTodo = (dispatch) => {
+  dispatch({ type: 'WAIT_TODO', payload: true })
+}
+
+const errorTodo = (error, dispatch) => {
+  dispatch({ type: 'ERROR_TODO', payload: error })
+}
 
 export const fetchTodos = async (dispatch) => {
-  const { data } = await axios(REACT_APP_API_TODOS)
+  waitTodo(dispatch)
 
-  await waitMe(80)
+  const { data, error } = await axios(REACT_APP_API_TODOS, {
+    params: {
+      _sort: 'id',
+      _order: 'desc',
+    }
+  })
+    .catch(error => ({ error }))
 
-  dispatch({ type: 'FETCH_TODOS', payload: data })
+  error
+    ? errorTodo(error, dispatch)
+    : dispatch({ type: 'FETCH_TODOS', payload: data })
 }
 
 export const addNewTodo = async (title, dispatch) => {
-  const { data } = await axios.post(REACT_APP_API_TODOS, {
+  waitTodo(dispatch)
+
+  const { data, error } = await axios.post(REACT_APP_API_TODOS, {
     title,
     complete: false,
   })
+    .catch(error => ({ error }))
 
-  dispatch({ type: 'ADD_TODO', payload: data })
-  fetchTodos(dispatch)
+  error
+    ? errorTodo(error, dispatch)
+    : dispatch({ type: 'ADD_TODO', payload: data })
 }
 
-export const updateTodo = async (type, todo, dispatch) => {
-  await axios.put(`${REACT_APP_API_TODOS}/${todo.id}`, todo)
+export const updateTodo = (type, todo, dispatch) => {
+  axios.put(`${REACT_APP_API_TODOS}/${todo.id}`, todo)
 
-  dispatch({ type, payload: todo.id })
-  fetchTodos(dispatch)
+  dispatch({ type, payload: todo })
 }
 
 export const toggleTodo = (todo, dispatch) => {
@@ -43,9 +58,8 @@ export const editTodo = (todo, dispatch) => {
   updateTodo('EDIT_TODO', todo, dispatch)
 }
 
-export const removeTodo = async (id, dispatch) => {
-  await axios.delete(`${REACT_APP_API_TODOS}/${id}`)
+export const removeTodo = (id, dispatch) => {
+  axios.delete(`${REACT_APP_API_TODOS}/${id}`)
 
   dispatch({ type: 'REMOVE_TODO', payload: id })
-  fetchTodos(dispatch)
 }

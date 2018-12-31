@@ -1,13 +1,15 @@
-/**
- * TodosContext.jsx
- * @author vikoder
- */
 import React, { createContext, useReducer, useEffect } from 'react'
+import PropTypes from 'prop-types'
 
 import todosReducer from '../../reducers/todosReducer'
 import { fetchTodos } from '../../actions'
 
-const initialState = { todos: [], isWait: true }
+const initialState = {
+  todos: [],
+  isWait: true,
+  error: null,
+}
+
 const TodosContext = createContext(initialState)
 
 export const Provider = ({ children }) => {
@@ -22,6 +24,10 @@ export const Provider = ({ children }) => {
       {children}
     </TodosContext.Provider>
   )
+}
+
+Provider.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default TodosContext

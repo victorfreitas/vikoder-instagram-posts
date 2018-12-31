@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
 
+import todoPropTypes from './todoPropTypes'
 import TodosContext from '../context/TodosContext'
 import { editTodo } from '../../actions'
 
@@ -21,5 +22,7 @@ const TodoTitle = ({ todo }) => {
     />
   )
 }
+
+TodoTitle.propTypes = todoPropTypes
 
 export default TodoTitle

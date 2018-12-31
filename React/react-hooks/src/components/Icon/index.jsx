@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import icons from './icons'
 
@@ -9,5 +10,10 @@ const Icon = ({ icon, alt }) => (
     alt={alt}
   />
 )
+
+Icon.propTypes = {
+  icon: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+}
 
 export default Icon

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const AddTodoField = ({ value, handleChange }) => (
   <input
@@ -8,5 +9,10 @@ const AddTodoField = ({ value, handleChange }) => (
     onChange={handleChange}
   />
 )
+
+AddTodoField.propTypes = {
+  value: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+}
 
 export default AddTodoField

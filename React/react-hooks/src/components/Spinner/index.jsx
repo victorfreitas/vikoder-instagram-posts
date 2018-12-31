@@ -1,4 +1,4 @@
-import React, { useContext, memo } from 'react'
+import React, { useContext } from 'react'
 
 import styles from './Spinner.module.css'
 import TodosContext from '../context/TodosContext'
@@ -13,4 +13,4 @@ const Spinner = () => {
   )
 }
 
-export default memo(Spinner)
+export default Spinner

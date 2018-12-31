@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Icon from '../Icon'
 
@@ -13,5 +14,10 @@ const TodoButton = ({ icon, handleClick }) => (
     />
   </button>
 )
+
+TodoButton.propTypes = {
+  icon: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
+}
 
 export default TodoButton

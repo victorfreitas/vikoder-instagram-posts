@@ -1,14 +1,11 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 import Icon from '../Icon'
 
-const AddTodoButton = ({ handleClick }) => (
-  <button
-    className="add-todo-button"
-    onClick={handleClick}
-  >
+const AddTodoButton = () => (
+  <button className="add-todo-button">
     Add <Icon icon="plus" alt="Add todo" />
   </button>
 )
 
-export default AddTodoButton
+export default memo(AddTodoButton)
