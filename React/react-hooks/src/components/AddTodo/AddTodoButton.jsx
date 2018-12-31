@@ -7,7 +7,7 @@ const AddTodoButton = ({ handleClick }) => (
     className="add-todo-button"
     onClick={handleClick}
   >
-    Add <Icon icon="plus" color="2cd097" alt="Add todo" />
+    Add <Icon icon="plus" alt="Add todo" />
   </button>
 )
 

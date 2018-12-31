@@ -11,7 +11,6 @@ const TodoButtons = ({ todo }) => {
     <Fragment>
       <TodoButton
         icon="check"
-        color="4e9450"
         handleClick={() => toggleTodo({
           ...todo,
           complete: !todo.complete,
@@ -19,7 +18,6 @@ const TodoButtons = ({ todo }) => {
       />
       <TodoButton
         icon="trash"
-        color="963d3b"
         handleClick={() => removeTodo(todo.id, dispatch)}
       />
     </Fragment>
