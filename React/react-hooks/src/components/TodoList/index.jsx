@@ -12,7 +12,7 @@ import Todos from './Todos'
 
 const TodoList = () => {
   const {
-    state: { todos: [...todos], isWait }
+    state: { todos, isWait }
   } = useContext(TodosContext)
 
   return (
