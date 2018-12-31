@@ -11,7 +11,6 @@ export default (state, action) => {
         isWait: false,
       }
 
-    // Created for examples to dispatch
     case 'WAIT_TODO':
     case 'ADD_TODO':
     case 'EDIT_TODO':

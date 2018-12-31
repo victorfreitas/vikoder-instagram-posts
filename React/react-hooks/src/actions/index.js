@@ -6,14 +6,14 @@ import axios from 'axios'
 
 const { REACT_APP_API_TODOS } = process.env
 
-const waitMe = async () => new Promise((resolve) => {
-  setTimeout(resolve, 80)
+const waitMe = async (time) => new Promise((resolve) => {
+  setTimeout(resolve, time)
 })
 
 export const fetchTodos = async (dispatch) => {
   const { data } = await axios(REACT_APP_API_TODOS)
 
-  await waitMe()
+  await waitMe(80)
 
   dispatch({ type: 'FETCH_TODOS', payload: data })
 }

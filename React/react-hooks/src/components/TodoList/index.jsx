@@ -16,10 +16,10 @@ const TodoList = () => {
   } = useContext(TodosContext)
 
   return (
-    todos.length
-      ? <Todos todos={todos} />
-      : isWait
+    isWait
       ? null
+      : todos.length
+      ? <Todos todos={todos} />
       : <EmptyTodos />
   )
 }
