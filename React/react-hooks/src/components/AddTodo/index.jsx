@@ -18,7 +18,7 @@ const AddTodo = () => {
     <AddTodoContent
       value={value}
       handleChange={({ target }) => setValue(target.value)}
-      handleClick={() => {
+      handleSubmit={() => {
         addNewTodo(value, dispatch)
         setValue('')
       }}

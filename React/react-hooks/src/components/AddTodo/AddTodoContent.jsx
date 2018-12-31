@@ -3,13 +3,13 @@ import React from 'react'
 import AddTodoField from './AddTodoField'
 import AddTodoButton from './AddTodoButton'
 
-const AddTodoContent = ({ value, handleChange, handleClick }) => (
+const AddTodoContent = ({ value, handleChange, handleSubmit }) => (
   <div className="add-todo">
     <AddTodoField
       value={value}
       handleChange={handleChange}
     />
-    <AddTodoButton handleClick={handleClick} />
+    <AddTodoButton handleClick={handleSubmit} />
   </div>
 )
 
