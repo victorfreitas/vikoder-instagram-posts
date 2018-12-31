@@ -1,8 +1,10 @@
 import React from 'react'
 
+import icons from './icons'
+
 const Icon = ({ icon, color, alt }) => (
   <img
-    src={`https:icon.now.sh/${icon}/${color}`}
+    src={icons[icon]}
     className={`icon icon-${icon}`}
     alt={alt}
   />
