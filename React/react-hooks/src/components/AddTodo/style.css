@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
-  padding: 0 5px;
+  padding: 5px;
   width: 250px;
 }
 
@@ -25,16 +25,17 @@
 }
 
 .add-todo-button {
-  background: transparent;
+  background: #1e5158;
+  border-radius: 3px;
   border: 0;
   color: #fff;
+  cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  padding: 0;
-  padding: 6px;
-  cursor: pointer;
-  width: 100%;
+  margin-left: 5px;
   outline: none;
+  padding: 4px 0 2px 0;
+  width: 100%;
 }
 
 .add-todo .icon {

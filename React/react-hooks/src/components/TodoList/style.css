@@ -42,29 +42,33 @@
   text-decoration: line-through;
 }
 
-.todos li:not(.complete) .todo-button.check {
-  background: #15a1bb;
-}
-
-.todo-button.trash {
-  background: transparent;
-}
-
 .todo-button {
   background: #ffffff;
   border: 0;
+  border-radius: 3px;
   cursor: pointer;
   display: flex;
   justify-content: flex-end;
-  margin-left: 10px;
   outline: none;
   padding: 0;
 }
 
 .todo-button img {
-  border-radius: 5px;
   border: 1px solid transparent;
   width: 18px;
+}
+
+.todos li:not(.complete) .todo-button.check {
+  background: #127082;
+}
+
+.todo-button.check {
+  margin-right: 5px;
+}
+
+.todo-button.trash img {
+  padding: 1px;
+  width: 16px;
 }
 
 .empty-todos {

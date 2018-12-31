@@ -1,3 +1,7 @@
+/**
+ * todosReducer.js
+ * @author vikoder
+ */
 export default (state, action) => {
   switch (action.type) {
     case 'FETCH_TODOS':
@@ -7,6 +11,7 @@ export default (state, action) => {
         isWait: false,
       }
 
+    // Created for examples in dispatch
     case 'WAIT_TODO':
     case 'ADD_TODO':
     case 'EDIT_TODO':

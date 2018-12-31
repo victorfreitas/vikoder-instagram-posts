@@ -1,29 +1,28 @@
+/**
+ * AddTodo.jsx
+ * @author vikoder
+ */
 import React, { useState, useContext } from 'react'
 
 import './style.css'
 
 import TodosContext from '../context/TodosContext'
 import { addNewTodo } from '../../actions'
-import AddTodoField from './AddTodoField'
-import AddTodoButton from './AddTodoButton'
+import AddTodoContent from './AddTodoContent'
 
 const AddTodo = () => {
   const [value, setValue] = useState('')
   const { dispatch } = useContext(TodosContext)
 
   return (
-    <div className="add-todo">
-      <AddTodoField
-        value={value}
-        handleChange={({ target }) => setValue(target.value)}
-      />
-      <AddTodoButton
-        handleClick={() => {
-          addNewTodo(value, dispatch)
-          setValue('')
-        }}
-      />
-    </div>
+    <AddTodoContent
+      value={value}
+      handleChange={({ target }) => setValue(target.value)}
+      handleClick={() => {
+        addNewTodo(value, dispatch)
+        setValue('')
+      }}
+    />
   )
 }
 
