@@ -12,7 +12,7 @@
     "debug": "^4.1.1",
     "dotenv": "^6.2.0",
     "dotenv-expand": "^4.2.0",
-    "mongoose": "^5.4.5",
+    "mongoose": "^5.7.5",
     "node-geocoder": "^3.22.0",
     "telegraf": "3.26.0"
   }
