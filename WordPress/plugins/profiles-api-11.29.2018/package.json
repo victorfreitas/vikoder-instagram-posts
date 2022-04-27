@@ -12,7 +12,7 @@
     "makepot": "grunt --gruntfile i18n/makepot.js makepot"
   },
   "devDependencies": {
-    "grunt": "^1.0.3",
+    "grunt": "^1.5.2",
     "grunt-cli": "^1.2.0",
     "grunt-wp-i18n": "^1.0.2"
   }
